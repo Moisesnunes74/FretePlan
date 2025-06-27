@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Usuário</title>
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+
+  <form action= "/cadastro" method="POST">
+    <label>Nome Completo:</label><br>
+    <input type="text" name="nome_completo" required><br><br>
+
+    <label>Senha:</label><br>
+    <input type="password" name="senha" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>DDD:</label><br>
+    <input type="text" name="ddtelefone" required><br><br>
+
+    <label>Telefone:</label><br>
+    <input type="text" name="telefone" required><br><br>
+
+    <label>Data de Nascimento:</label><br>
+    <input type="date" name="data" required><br><br>
+
+     <select name="genero">
+    <option value="Masculino">Masculino</option>
+    <option value="Feminino">Feminino</option>
+    </select>
+
+    <label>Estado:</label><br>
+    <input type="text" name="estado" required><br><br>
+
+    <label>Cidade:</label><br>
+    <input type="text" name="cidade" required><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</body>
+</html>
