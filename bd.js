@@ -4,10 +4,10 @@ import mysql from 'mysql2/promise';
 export async function conectarBd() {
     const connection =  await mysql.createConnection(
         {
-    host: 'tramway.proxy.rlwy.net',
-    user: 'root',
-    password: 'KlBUbcYgypweeQjOJxCzQgbmHoJcKWoo',
-    database: 'railway',
+    host: '',
+    user: '',
+    password: '',
+    database: '',
     port: 28256
      }
 )
