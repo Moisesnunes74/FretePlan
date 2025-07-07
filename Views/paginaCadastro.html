@@ -7,7 +7,7 @@
 <body>
   <h1>Cadastro de Usuário</h1>
 
-  <form action= "/cadastro" method="POST">
+  <form action= "/usuario/cadastro" method="POST">
     <label>Nome Completo:</label><br>
     <input type="text" name="nome_completo" required><br><br>
 
@@ -39,5 +39,7 @@
 
     <button type="submit">Cadastrar</button>
   </form>
+
+  <button onclick="location.href='/usuario/login'">Já tenho uma conta</button>
 </body>
 </html>

@@ -7,3 +7,10 @@ export async function salvarUsuario(nome_completo, senha, email, ddtelefone, tel
 
     await connection.execute (query, valores)
 }
+
+export async function buscarUsuario(email, senha) {
+    const connection = await conectarBd();
+    const query = 'SELECT * FROM USUARIO WHERE email = ? AND senha = ?';
+    const valores = [email, senha];
+    const [rows] = await connection.execute(query, valores)
+}

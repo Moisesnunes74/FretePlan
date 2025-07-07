@@ -17,11 +17,18 @@ const __dirname = path.dirname(__filename);
 conectarBd();
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'home.html'));
+})
+
+app.get ('/usuario/cadastro', (req, res) => {
     res.sendFile(path.join(__dirname, 'Views', 'paginaCadastro.html'));
 })
 
+app.get ('/usuario/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'paginaLogin.html'));
+})
 
-app.use('/', usuarioRoutes);
+app.use('/usuario', usuarioRoutes);
 
 app.listen (port, () => {
     console.log(`Servidor rodando na porta ${port}`);
