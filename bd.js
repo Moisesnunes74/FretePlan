@@ -4,11 +4,11 @@ import mysql from 'mysql2/promise';
 export async function conectarBd() {
     const connection =  await mysql.createConnection(
         {
-    host: '',
-    user: '',
+    host: 'localhost',
+    user: 'root',
     password: '',
     database: '',
-    port: 28256
+    port: 3306
      }
 )
 
