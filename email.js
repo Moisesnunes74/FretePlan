@@ -4,8 +4,8 @@ export async function conectarEmail(email) {
     const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "",
-        pass: ""
+        user: "freteplan@gmail.com",
+        pass: "jzqslzvqjpvxlyzl"
     }
 })
     return transporter;

@@ -1,6 +1,7 @@
 import {alterarSenha, salvarUsuario} from "../Models/usuarioModel.js";
-import { buscarUsuario } from "../Models/usuarioModel.js";
+import {buscarUsuario } from "../Models/usuarioModel.js";
 import {verificarUsuarioExistente} from "../Models/usuarioModel.js";
+import {enviarCodigoCadastro} from "./emailController.js";
 
 
 export async function cadastrarUsuario(req, res) {
@@ -13,7 +14,10 @@ export async function cadastrarUsuario(req, res) {
             return res.status(400).json({ message: "Usuário já cadastrado." });
         }
 
+        await enviarCodigoCadastro(email);
+
         await salvarUsuario(nome_completo, senha, email, dddtelefone, telefone, data_nascimento, genero, estado, cidade);
+        await 
         res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
     } catch (error) {
         console.error("Erro ao cadastrar usuário:", error);
@@ -38,7 +42,7 @@ export async function loginUsuario(req, res) {
     }
 }
 
-export async function alterarEmailUsuario(req, res) {
+export async function alterarSenhaUsuario(req, res) {
     const {senha, email} = req.body;
 
     try {

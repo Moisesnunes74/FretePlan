@@ -1,11 +1,11 @@
+//Frameworks
 import express from 'express';
 import path from 'path';
 import session from 'express-session';
 import { fileURLToPath } from 'url';
-
 import usuarioRoutes from './Routes/usuarioRoutes.js';
 
-
+//Portas
 const app = express();
 const port = 3000;
 

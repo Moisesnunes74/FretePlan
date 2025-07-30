@@ -6,8 +6,8 @@ export async function conectarBd() {
         {
     host: 'localhost',
     user: 'root',
-    password: '',
-    database: '',
+    password: '41433104M',
+    database: 'BDFretePlan',
     port: 3306
      }
 )
